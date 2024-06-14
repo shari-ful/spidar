@@ -78,8 +78,8 @@ def diagnose(data):
 def lxml_trace(data, html=True, **kwargs):
     """Print out the lxml events that occur during parsing.
 
-    This lets you see how lxml parses a document when no Beautiful
-    Soup code is running. You can use this to determine whether
+    This lets you see how lxml parses a document when no Spidar
+    code is running. You can use this to determine whether
     an lxml-specific problem is in Spidar's lxml tree builders
     or in lxml itself.
 

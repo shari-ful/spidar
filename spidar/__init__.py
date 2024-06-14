@@ -804,17 +804,17 @@ class Spidar(Tag):
 _s = Spidar
 _soup = Spidar
 
-class BeautifulStoneSoup(Spidar):
+class SpidarStone(Spidar):
     """Deprecated interface to an XML parser."""
 
     def __init__(self, *args, **kwargs):
         kwargs['features'] = 'xml'
         warnings.warn(
-            'The BeautifulStoneSoup class is deprecated. Instead of using '
+            'The SpidarStone class is deprecated. Instead of using '
             'it, pass features="xml" into the Spidar constructor.',
             DeprecationWarning, stacklevel=2
         )
-        super(BeautifulStoneSoup, self).__init__(*args, **kwargs)
+        super(SpidarStone, self).__init__(*args, **kwargs)
 
 
 class StopParsing(Exception):

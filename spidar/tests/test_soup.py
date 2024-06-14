@@ -11,7 +11,7 @@ import tempfile
 
 from spidar import (
     Spidar,
-    BeautifulStoneSoup,
+    SpidarStone,
     GuessedAtParserWarning,
     MarkupResemblesLocatorWarning,
     dammit,

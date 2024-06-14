@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Tests for Spidar's tree traversal methods.
 
-The tree traversal methods are the main advantage of using Beautiful
-Soup over just using a parser.
+The tree traversal methods are the main advantage of using Spidar
+over just using a parser.
 
 Different parsers will build different Spidar trees given the
 same markup, but all Spidar trees can be traversed with the

@@ -11,7 +11,7 @@ if LXML_PRESENT:
 
 from spidar import (
     Spidar,
-    BeautifulStoneSoup,
+    SpidarStone,
     )
 from spidar.element import Comment, Doctype, SoupStrainer
 from . import (
@@ -58,15 +58,15 @@ class TestLXMLTreeBuilder(SoupTest, HTMLTreeBuilderSmokeTest):
         doctype = soup.contents[0]
         assert "" == doctype.strip()
 
-    def test_beautifulstonesoup_is_xml_parser(self):
+    def test_SpidarStone_is_xml_parser(self):
         # Make sure that the deprecated BSS class uses an xml builder
         # if one is installed.
         with warnings.catch_warnings(record=True) as w:
-            soup = BeautifulStoneSoup("<b />")
+            soup = SpidarStone("<b />")
         assert "<b/>" == str(soup.b)
         [warning] = w
         assert warning.filename == __file__
-        assert "BeautifulStoneSoup class is deprecated" in str(warning.message)
+        assert "SpidarStone class is deprecated" in str(warning.message)
 
     def test_tracking_line_numbers(self):
         # The lxml TreeBuilder cannot keep track of line numbers from
